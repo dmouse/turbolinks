@@ -1,0 +1,7 @@
+name: turbolinks
+type: module
+description: Turbolinks wrapper Drupal module
+core: 8.x
+package: Middleware
+libraries:
+  - turbolinks/turbolinks

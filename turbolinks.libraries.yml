@@ -1,0 +1,12 @@
+turbolinks:
+  version: VERSION
+  js:
+    js/turbolinks.js: { weight: -20 }
+  dependencies:
+    - core/jquery
+jquery.turbolinks:
+  version: VERSION
+  js:
+    js/jquery.turbolinks.js: { weight: -20 }
+  dependencies:
+    - core/jquery

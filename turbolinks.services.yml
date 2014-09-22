@@ -1,0 +1,8 @@
+services:
+  turbolinks.class:
+    class: Helthe\Component\Turbolinks\Turbolinks
+  turbolinks.middleware:
+    class: Helthe\Component\Turbolinks\StackTurbolinks
+    arguments: ["@turbolinks.class"]
+    tags:
+      - { name: http_middleware, priority: 400 }

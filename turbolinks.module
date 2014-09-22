@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Contains turbolinks.module
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+
+function turbolinks_help($route_name, RouteMatchInterface $route_match)
+{
+  switch ($route_name) {
+    // Main module help for the turbolinks module.
+    case 'help.page.turbolinks':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Turbolinks wrapper Drupal module') . '</p>';
+      return $output;
+    break;
+  }
+}
+
+function turbolinks_page_alter(&$page) {
+  $page['#attached']['library'][] = 'turbolinks/turbolinks';
+  $page['#attached']['library'][] = 'turbolinks/jquery.turbolinks';
+}
